@@ -1,11 +1,12 @@
 const express = require("express");
 const app = express();
 
+const port = process.env.PORT || 3000;
 app.get("/", (req, res) => {
   res.send("Iam inside docker!");
 });
 
-const port = 3000;
+//
 app.listen(port, () => {
-  console.log(`Express server listening at port http://0.0.0.0:${port}`);
+  console.log(`Express server listening at port   ${port}`);
 });
